@@ -1,1 +1,23 @@
 # Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Entornos locales
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# SO / editor
+.DS_Store
+Thumbs.db
+
+# Datos generados por el script
+data/dna_sequences_clean.csv
+dna_sequences_clean.csv
+
+# Logs
+*.log
