@@ -25,6 +25,4 @@ See `requirements.txt`
 
 From the repository root:
 
-```bash
-python explore_dataset.py --csv data/dna_sequences_bad.csv
 
