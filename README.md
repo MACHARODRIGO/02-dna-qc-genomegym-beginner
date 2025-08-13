@@ -13,31 +13,6 @@ File with intentional errors: `data/dna_sequences_bad.csv`
 It includes duplicate IDs, empty sequences or sequences with leading/trailing spaces, lowercase letters, characters outside **A/C/G/T** (e.g., `N`, dashes), and RNA letters (`U`).  
 **Note:** Errors are embedded directly in the sequences (no inline comments in the CSV).
 
-It contains:
-- 🆔 Duplicate IDs
-- ⬜ Empty sequences or sequences with leading/trailing spaces
-- 🔠 Lowercase letters
-- ❌ Characters outside A/C/G/T (e.g., N, dashes)
-- 🧬 RNA letters (U)
-
-## 📋 Requirements
-See `requirements.txt`
-
-## 🖥️ How to Run
-
-### default CSV (data/dna_sequences_bad.csv)
-python sequence_quality_checker.py
-
-### custom CSV
-python sequence_quality_checker.py --csv path/to/your.csv
-
-### strict mode (exit 1 if any QC error is found)
-python sequence_quality_checker.py --strict
-
-### show cleaning preview in the console
-python sequence_quality_checker.py --show-clean
-
-
 ## 📊 What the script does
 
 1. Prints dataset size and first rows.
@@ -57,10 +32,40 @@ python sequence_quality_checker.py --show-clean
 
 6. Saves a clean two-column CSV as dna_sequences_clean.csv next to the input file:
 
-...
+```csv
 id,sequence
 seq1,ATGCGTACGTTAG
 seq2,GGGTTTCCCAAAGG
-...
+```
+
+
+## 📋 Requirements
+See `requirements.txt`
+
+## 🖥️ How to Run
+
+Default CSV (data/dna_sequences_bad.csv)
+```
+python sequence_quality_checker.py
+```
+
+Custom CSV
+```
+python sequence_quality_checker.py --csv path/to/your.csv
+```
+
+Strict mode (exit 1 if any QC error is found)
+```
+python sequence_quality_checker.py --strict
+```
+Show cleaning preview in the console
+```
+python sequence_quality_checker.py --show-clean
+```
+
+
+
+
+
 
 
